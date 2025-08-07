@@ -2,7 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative max-w-full overflow-hidden">
+    <div className="max-w-full overflow-hidden">
+      {/* Image */}
       <Image
         src="/Rebrand.png"
         alt="Dynastical Clients"
@@ -13,12 +14,13 @@ export default function Home() {
         priority
       />
 
-      {/* Centered tagline on mobile only */}
-      <div className="md:hidden absolute inset-0 flex items-center justify-center">
-        <p className="text-lg font-semibold text-white bg-black/60 px-4 py-2 rounded">
+      {/* Mobile-only tagline (centered below image) */}
+      <div className="md:hidden flex items-center justify-center h-40">
+        <p className="text-lg font-semibold text-gray-800 text-center px-4">
           Our New Website is Coming Soon! |
         </p>
       </div>
     </div>
   );
 }
+
